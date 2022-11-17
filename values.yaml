@@ -2,9 +2,10 @@ global:
   elasticsearch:
     enabled: true
   kibana:
-    enabled: false
+    enabled: true
   logstash: 
-    enabled: false
-    
+    enabled: true
+
 elasticsearch:
   replicas: 1
+  image: elasticsearch
