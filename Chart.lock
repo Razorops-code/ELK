@@ -1,0 +1,12 @@
+dependencies:
+- name: elasticsearch
+  repository: https://helm.elastic.co
+  version: 8.5.1
+- name: kibana
+  repository: https://helm.elastic.co
+  version: 8.5.1
+- name: logstash
+  repository: https://helm.elastic.co
+  version: 8.5.1
+digest: sha256:4fc20e40937d14a16af06083ecbd5908469b484c957660e4a19a8792b26b1a5c
+generated: "2022-11-17T11:48:57.504081812+05:30"
