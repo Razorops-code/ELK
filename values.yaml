@@ -1,19 +1,19 @@
 global:
   elasticsearch:
     enabled: true
-
   kibana:
-    enabled: false
+    enabled: true
   logstash: 
-    enabled: false
+    enabled: true
+  metricbeat: 
+    enabled: true
 
 elasticsearch:
   replicas: 1
-  image: elasticsearch
   podAnnotations: 
       "helm.sh/hook": pre-install
   secret:
     password: elastic   # password for elastic user
 
 beat:
-  elasticsearch_host: elasticsearch-master.elk.svc.cluster.local
+  elasticsearch_host: elasticsearch-master

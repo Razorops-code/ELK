@@ -38,3 +38,7 @@ dependencies:
     version: 8.5.1
     repository: https://helm.elastic.co
     condition: global.logstash.enabled
+  - name: metricbeat
+    version: 8.5.1
+    repository: https://helm.elastic.co
+    condition: global.metricbeat.enabled

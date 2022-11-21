@@ -8,5 +8,8 @@ dependencies:
 - name: logstash
   repository: https://helm.elastic.co
   version: 8.5.1
-digest: sha256:4fc20e40937d14a16af06083ecbd5908469b484c957660e4a19a8792b26b1a5c
-generated: "2022-11-17T11:48:57.504081812+05:30"
+- name: metricbeat
+  repository: https://helm.elastic.co
+  version: 8.5.1
+digest: sha256:3c6c25f9fbae452940a1840cbec18a869887eab5f07e8d9c98d63486b1c5db55
+generated: "2022-11-21T11:52:43.949057932+05:30"
