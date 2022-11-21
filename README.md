@@ -24,6 +24,11 @@ Install kibana
 helm upgrade --install elk . --create-namespace -n elk --set "global.kibana.enabled=true"
 ```
 
+### Uninstallhelm chart
+
+```
+helm uninstall elk -n elk
+```
 
 ### For the reference of the values to change parametes of charts follow:
 
