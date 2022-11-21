@@ -12,8 +12,16 @@ helm lint
 
 ### Install/Upgrade helm chart
 
+Install elasticsearch, logstash, metricbeat
+
 ```
-helm upgrade --install elk . --create-namespace -n elk
+helm upgrade --install elk . --create-namespace -n elk --set "global.kibana.enabled=false"
+```
+
+Install kibana
+
+```
+helm upgrade --install elk . --create-namespace -n elk --set "global.kibana.enabled=true"
 ```
 
 
