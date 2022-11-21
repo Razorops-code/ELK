@@ -2,7 +2,7 @@ global:
   elasticsearch:
     enabled: true
   kibana:
-    enabled: true
+    enabled: false   # kept it out because of it's hook 
   logstash: 
     enabled: true
   metricbeat: 
@@ -10,8 +10,6 @@ global:
 
 elasticsearch:
   replicas: 1
-  podAnnotations: 
-      "helm.sh/hook": pre-install
   secret:
     password: elastic   # password for elastic user
   volumeClaimTemplate:
@@ -22,12 +20,12 @@ elasticsearch:
 beat:
   elasticsearch_host: elasticsearch-master
 
-# logstash:
-#   logstashConfig:
-#     logstash.yml: |
-#         http.host: 0.0.0.0
-#         xpack.monitoring.enabled: false
-#         xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch-master:9200" ]
+logstash:
+  logstashConfig:
+    logstash.yml: |
+        http.host: 0.0.0.0
+        xpack.monitoring.enabled: false
+        xpack.monitoring.elasticsearch.hosts: [ "http://elasticsearch-master:9200" ]
 
   extraEnvs:
   - name: "ELASTICSEARCH_USERNAME"

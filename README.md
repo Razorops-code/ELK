@@ -1,5 +1,6 @@
 
 ### Install helm chart dependency
+
 ```
 helm dependency build
 ```
@@ -21,7 +22,11 @@ helm upgrade --install elk . --create-namespace -n elk --set "global.kibana.enab
 Install kibana
 
 ```
-helm upgrade --install elk . --create-namespace -n elk --set "global.kibana.enabled=true"
+helm repo add elastic https://helm.elastic.co
+```
+
+```
+helm install kibana elastic/kibana --version 8.5.1 -n elk
 ```
 
 ### Uninstallhelm chart
