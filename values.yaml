@@ -22,9 +22,9 @@ elasticsearch:
     periodSeconds: 10
     successThreshold: 3
     timeoutSeconds: 5
-  # antiAffinity: "soft"
-  minimumMasterNodes: 1 # for replica 1 
-  clusterHealthCheckParams: "wait_for_status=yellow&timeout=30s"
+  # antiAffinity: "soft"  # when we have single node
+  minimumMasterNodes: 1 # if replica is 1, on multi node comment it 
+  clusterHealthCheckParams: "wait_for_status=yellow&timeout=30s" # if replica is 1, on multi node make it wait_for_status=green
 
 beat:
   elasticsearch_host: elasticsearch-master
