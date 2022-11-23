@@ -16,6 +16,15 @@ elasticsearch:
     resources:
       requests:
         storage: 5Gi
+  readinessProbe:
+    failureThreshold: 3
+    initialDelaySeconds: 200
+    periodSeconds: 10
+    successThreshold: 3
+    timeoutSeconds: 5
+  # antiAffinity: "soft"
+  minimumMasterNodes: 1 # for replica 1 
+  clusterHealthCheckParams: "wait_for_status=yellow&timeout=30s"
 
 beat:
   elasticsearch_host: elasticsearch-master

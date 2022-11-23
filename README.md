@@ -32,6 +32,10 @@ helm install kibana elastic/kibana --version 8.5.1 -n elk
 ### Uninstallhelm chart
 
 ```
+helm uninstall kibana -n elk
+```
+
+```
 helm uninstall elk -n elk
 ```
 
